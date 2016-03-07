@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-@SuppressWarnings("unused")
+
 public class Triangle_Test {
 
 		@BeforeClass
@@ -42,6 +42,14 @@ public class Triangle_Test {
 		}
 		
 		@Test
+		public void test_Getters_args() {
+		Triangle total = new Triangle(4,5,6);
+		assertTrue(total.getSide1() == 4);
+		assertTrue(total.getSide2() == 5);
+		assertTrue(total.getSide3() == 6);
+		}
+		
+		@Test
 		public void test_Area_noargs() {
 		Triangle total = new Triangle();
 		double x = total.getArea();
@@ -53,6 +61,14 @@ public class Triangle_Test {
 		Triangle total = new Triangle();
 		double x = total.getPerimeter();
 		assertTrue(x == 3);
+		}
+		
+		@Test
+		public void test_Getters_noargs() {
+		Triangle total = new Triangle();
+		assertTrue(total.getSide1() == 1);
+		assertTrue(total.getSide2() == 1);
+		assertTrue(total.getSide3() == 1);
 		}
 		
 }
